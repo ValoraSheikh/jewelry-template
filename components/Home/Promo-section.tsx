@@ -30,7 +30,7 @@ export default function PromoSection() {
           <Image
             fill
             alt=""
-            src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-sale-full-width.jpg"
+            src="https://images.unsplash.com/photo-1631050165122-626a1377fbce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amV3ZWxyeSUyMHByb21vfGVufDB8MHwwfHx8MA%3D%3D"
             className="size-full object-cover"
           />
         </div>

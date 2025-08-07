@@ -17,7 +17,7 @@ export default function Category() {
             <Image
             fill
               alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
-              src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-featured-category.jpg"
+              src="https://images.unsplash.com/photo-1634390756696-505390283f61?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGpld2Vscnl8ZW58MHwyfDB8fHww"
               className="absolute size-full object-cover group-hover:opacity-75"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50" />
@@ -39,7 +39,7 @@ export default function Category() {
             <Image
             fill
               alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters."
-              src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-category-01.jpg"
+              src="https://images.unsplash.com/photo-1531995811006-35cb42e1a022?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8amV3ZWxyeXxlbnwwfDB8MHx8fDA%3D"
               className="absolute size-full object-cover group-hover:opacity-75"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50" />
@@ -61,7 +61,7 @@ export default function Category() {
             <Image
               fill
               alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk."
-              src="https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-03-category-02.jpg"
+              src="https://images.unsplash.com/photo-1591209627710-d2427565a41f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGpld2Vscnl8ZW58MHwwfDB8fHww"
               className="absolute size-full object-cover group-hover:opacity-75"
             />
             <div aria-hidden="true" className="absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50" />

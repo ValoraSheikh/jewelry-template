@@ -7,7 +7,7 @@ const products = [
     color: 'Black',
     price: '$35',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-product-01.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1693213085231-fc580d8916de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8amV3ZWxyeSUyMHByb2R1Y3R8ZW58MHwyfDB8fHww',
     imageAlt: 'Black machined steel pen with hexagonal grip and small white logo at top.',
     availableColors: [
       { name: 'Black', colorBg: '#111827' },
@@ -21,7 +21,7 @@ const products = [
     color: 'Matte Black',
     price: '$28',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-product-02.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1693833923492-16fd4c1373bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8amV3ZWxyeSUyMHByb2R1Y3R8ZW58MHwyfDB8fHww',
     imageAlt: 'Black porcelain mug with modern square handle and natural clay accents on rim and bottom.',
     availableColors: [
       { name: 'Matte Black', colorBg: '#4B5563' },
@@ -34,7 +34,7 @@ const products = [
     color: 'Natural',
     price: '$50',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-product-03.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1617791693847-e9a22372299e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGpld2VscnklMjBwcm9kdWN0fGVufDB8MnwwfHx8MA%3D%3D',
     imageAlt: 'Natural leather journal with brass disc binding and three paper refill sets.',
     availableColors: [
       { name: 'Natural', colorBg: '#FEF3C7' },
@@ -48,7 +48,7 @@ const products = [
     color: 'Black',
     price: '$50',
     href: '#',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-02-product-04.jpg',
+    imageSrc: 'https://images.unsplash.com/photo-1571859906623-9612b0f58b86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGpld2VscnklMjBwcm9kdWN0fGVufDB8MnwwfHx8MA%3D%3D',
     imageAlt: 'Black leather journal with brass disc binding.',
     availableColors: [
       { name: 'Black', colorBg: '#111827' },
