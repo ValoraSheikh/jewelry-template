@@ -1,10 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const products = [
   {
     id: 1,
     name: 'Focus Paper Refill',
-    href: '#',
+    href: '/products/123',
     price: '$13',
     description: '3 sizes available',
     imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-01-image-card-01.jpg',
@@ -13,7 +14,7 @@ const products = [
   {
     id: 2,
     name: 'Focus Card Holder',
-    href: '#',
+    href: '/products/123',
     price: '$64',
     description: 'Walnut',
     imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-01-image-card-02.jpg',
@@ -22,7 +23,7 @@ const products = [
   {
     id: 3,
     name: 'Focus Carry Case',
-    href: '#',
+    href: '/products/123',
     price: '$32',
     description: 'Heather Gray',
     imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-01-image-card-03.jpg',
@@ -31,7 +32,7 @@ const products = [
   {
     id: 4,
     name: 'Focus Multi-Pack',
-    href: '#',
+    href: '/products/123',
     price: '$39',
     description: '3 refill packs',
     imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-01-image-card-04.jpg',
@@ -40,7 +41,7 @@ const products = [
   {
     id: 5,
     name: 'Machined Mechanical Pencil',
-    href: '#',
+    href: '/products/123',
     price: '$35',
     description: 'Black and brass',
     imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-01-image-card-05.jpg',
@@ -49,7 +50,7 @@ const products = [
   {
     id: 6,
     name: 'Brass Scissors',
-    href: '#',
+    href: '/products/123',
     price: '$50',
     description: 'Includes brass stand',
     imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-01-image-card-06.jpg',
@@ -67,7 +68,7 @@ export default function Products() {
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
+            <Link key={product.id} href={product.href} className="group">
               <Image
               height={500}
               width={500}
@@ -80,7 +81,7 @@ export default function Products() {
                 <p>{product.price}</p>
               </div>
               <p className="mt-1 text-sm text-gray-500 italic">{product.description}</p>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

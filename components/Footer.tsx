@@ -249,12 +249,12 @@ const Footer = () => {
                       type="text"
                       autoComplete="email"
                       aria-label="Email address"
-                      className="block w-full rounded-md bg-white px-4 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      className="block w-full rounded-md bg-white px-4 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:gray-indigo-600"
                     />
                     <div className="mt-3 sm:mt-0 sm:ml-4 sm:shrink-0">
                       <button
                         type="submit"
-                        className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-xs hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-hidden"
+                        className="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white shadow-xs hover:bg-gray-700 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-hidden"
                       >
                         Sign up
                       </button>
@@ -270,7 +270,7 @@ const Footer = () => {
                     alt=""
                     className="size-full object-cover saturate-0 filter"
                   />
-                  <div className="absolute inset-0 bg-indigo-600/90" />
+                  <div className="absolute inset-0 bg-gray-600/90" />
                 </div>
                 <div className="relative mx-auto max-w-sm text-center">
                   <h3 className="text-2xl font-bold tracking-tight text-white">
@@ -325,7 +325,7 @@ const Footer = () => {
                   <Image
                   height={500}
                   width={500}
-                    src="https://tailwindcss.com/plus-assets/img/flags/flag-canada.svg"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png?20240117202436"
                     alt=""
                     className="h-auto w-5 shrink-0"
                   />
