@@ -63,8 +63,8 @@ export default function TrendingProducts() {
     <div className="bg-white">
       <div className="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8">
         <div className="flex items-center justify-between px-4 sm:px-6 lg:px-0">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Trending products</h2>
-          <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 font-playfair">Treasures Adored by Our Patrons</h2>
+          <a href="#" className="hidden text-sm font-semibold text-gray-600 hover:text-gray-500 sm:block">
             See everything
             <span aria-hidden="true"> &rarr;</span>
           </a>
@@ -88,13 +88,13 @@ export default function TrendingProducts() {
                     />
                     <div className="mt-6">
                       <p className="text-sm text-gray-500">{product.color}</p>
-                      <h3 className="mt-1 font-semibold text-gray-900">
+                      <h3 className="mt-1 font-semibold text-gray-900 font-serif">
                         <a href={product.href}>
-                          <span className="absolute inset-0" />
+                          <span className="absolute inset-0 font-serif" />
                           {product.name}
                         </a>
                       </h3>
-                      <p className="mt-1 text-gray-900">{product.price}</p>
+                      <p className="mt-1 text-gray-900 font-serif">{product.price}</p>
                     </div>
                   </div>
 

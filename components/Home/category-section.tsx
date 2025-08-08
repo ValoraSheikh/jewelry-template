@@ -5,8 +5,8 @@ export default function Category() {
     <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="sm:flex sm:items-baseline sm:justify-between">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Shop by Category</h2>
-          <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+          <h2 className="text-2xl tracking-tight font-playfair font-semibold text-gray-900">The Solitaire Collection</h2>
+          <a href="#" className="hidden text-sm font-semibold text-gray-600 hover:text-gray-500 sm:block">
             Browse all categories
             <span aria-hidden="true"> &rarr;</span>
           </a>
@@ -25,7 +25,7 @@ export default function Category() {
               <div>
                 <h3 className="font-semibold text-white">
                   <a href="#">
-                    <span className="absolute inset-0" />
+                    <span className="absolute inset-0 font-serif" />
                     New Arrivals
                   </a>
                 </h3>
@@ -47,7 +47,7 @@ export default function Category() {
               <div>
                 <h3 className="font-semibold text-white">
                   <a href="#">
-                    <span className="absolute inset-0" />
+                    <span className="absolute inset-0 font-serif" />
                     Accessories
                   </a>
                 </h3>
@@ -69,7 +69,7 @@ export default function Category() {
               <div>
                 <h3 className="font-semibold text-white">
                   <a href="#">
-                    <span className="absolute inset-0" />
+                    <span className="absolute inset-0 font-serif" />
                     Workspace
                   </a>
                 </h3>

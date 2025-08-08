@@ -80,8 +80,8 @@ export default function PromoSection() {
                   />
                 </svg>
                 <div className="mt-8 sm:mt-0 sm:ml-6 lg:mt-10 lg:ml-0">
-                  <p className="text-lg text-gray-600">{testimonial.quote}</p>
-                  <cite className="mt-4 block font-semibold text-gray-900 not-italic">{testimonial.attribution}</cite>
+                  <p className="text-lg text-gray-600 font-serif">{testimonial.quote}</p>
+                  <cite className="mt-4 block font-semibold text-gray-900 not-italic font-playfair">{testimonial.attribution}</cite>
                 </div>
               </blockquote>
             ))}

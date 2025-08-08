@@ -27,7 +27,7 @@ export default function Incentive() {
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             <div>
               <h2 className="text-4xl font-bold tracking-tight text-gray-900">
-                We built our business on great customer service
+                A Decade of Assurance
               </h2>
               <p className="mt-4 text-gray-500">
                 At the beginning at least, but then we realized we could make a lot more money if we kinda stopped

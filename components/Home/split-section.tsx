@@ -21,17 +21,18 @@ export default function SplitImage() {
             className="absolute inset-0 size-full object-cover"
           />
           <div className="relative flex w-full flex-col items-start justify-end bg-black/40 p-8 sm:p-12">
-            <h2 className="text-lg font-medium text-white/75">
-              Self-Improvement
+            <h2 className="text-lg text-white/75 font-playfair font-semibold
+            ">
+              The Solitaire Signature
             </h2>
-            <p className="mt-1 text-2xl font-medium text-white">
-              Journals and note-taking
+            <p className="mt-1 text-2xl font-medium text-white font-serif">
+              Discover brilliance perfected over generations.
             </p>
             <a
               href="#"
               className="mt-4 rounded-md bg-white px-4 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50"
             >
-              Shop now
+              Explore Collection
             </a>
           </div>
         </div>
@@ -44,11 +45,11 @@ export default function SplitImage() {
             className="absolute inset-0 size-full object-cover"
           />
           <div className="relative flex w-full flex-col items-start justify-end bg-black/40 p-8 sm:p-12">
-            <h2 className="text-lg font-medium text-white/75">
-              Desk and Office
+            <h2 className="text-lg font-semibold text-white/75 font-playfair">
+              The Heritage Gold Line
             </h2>
-            <p className="mt-1 text-2xl font-medium text-white">
-              Work from home accessories
+            <p className="mt-1 text-2xl font-medium text-white font-serif">
+              Crafted in pure 22K gold, inspired by royal traditions.
             </p>
             <a
               href="#"

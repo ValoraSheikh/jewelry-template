@@ -33,8 +33,8 @@ export default function Category1() {
     <div className="bg-white">
       <div className="py-16 sm:py-24 xl:mx-auto xl:max-w-7xl xl:px-8">
         <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Shop by Category</h2>
-          <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 font-serif">Shop by Category</h2>
+          <a href="#" className="hidden text-sm font-semibold text-gray-600 hover:text-gray-500 sm:block">
             Browse all categories
             <span aria-hidden="true"> &rarr;</span>
           </a>
@@ -57,7 +57,7 @@ export default function Category1() {
                       aria-hidden="true"
                       className="absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-gray-800 opacity-50"
                     />
-                    <span className="relative mt-auto text-center text-xl font-bold text-white">{category.name}</span>
+                    <span className="relative mt-auto text-center text-xl font-bold text-white font-playfair">{category.name}</span>
                   </a>
                 ))}
               </div>
