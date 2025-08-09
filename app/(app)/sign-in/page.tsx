@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import Link from "next/link";
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
@@ -168,12 +169,12 @@ export default function SignInPage() {
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-600">
               Not registered?{" "}
-              <a
-                href="/signup"
+              <Link
+                href="/sign-up"
                 className="font-medium text-gray-900 hover:text-blue-600 transition-colors"
               >
                 Create account
-              </a>
+              </Link>
             </p>
           </div>
         </div>
