@@ -70,7 +70,7 @@ const DEFAULT_ITEMS: TimelineItem[] = [
     description:
       "Started in a small Jodhpur workshop, crafting timeless designs for local weddings.",
     image: {
-      src: "/placeholder.svg?height=640&width=960",
+      src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvcHxlbnwwfHwwfHx8MA%3D%3D",
       alt: "Artisan at a jewelry bench in a small Jodhpur workshop",
     },
   },
@@ -80,7 +80,7 @@ const DEFAULT_ITEMS: TimelineItem[] = [
     description:
       "Opened our first luxury store, introducing exclusive bridal collections.",
     image: {
-      src: "/placeholder.svg?height=640&width=960",
+      src: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNob3B8ZW58MHx8MHx8fDA%3D",
       alt: "Elegant interior of a luxury jewelry boutique",
     },
   },
@@ -90,7 +90,7 @@ const DEFAULT_ITEMS: TimelineItem[] = [
     description:
       "Featured in leading bridal magazines for exquisite craftsmanship.",
     image: {
-      src: "/placeholder.svg?height=640&width=960",
+      src: "https://images.unsplash.com/photo-1487377330423-12f2f3e6d27a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHNob3B8ZW58MHx8MHx8fDA%3D",
       alt: "Editorial magazine spread featuring bridal jewelry",
     },
   },
@@ -100,7 +100,7 @@ const DEFAULT_ITEMS: TimelineItem[] = [
     description:
       "Introduced hallmark-certified gold and internationally graded diamonds.",
     image: {
-      src: "/placeholder.svg?height=640&width=960",
+      src: "https://images.unsplash.com/photo-1464979681340-bdd28a61699e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHNob3B8ZW58MHx8MHx8fDA%3D",
       alt: "Diamond grading tools with hallmark certificate",
     },
   },
@@ -110,7 +110,7 @@ const DEFAULT_ITEMS: TimelineItem[] = [
     description:
       "Launched our online boutique, blending heritage with modern convenience.",
     image: {
-      src: "/placeholder.svg?height=640&width=960",
+      src: "https://images.unsplash.com/photo-1562280963-8a5475740a10?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHNob3B8ZW58MHx8MHx8fDA%3D",
       alt: "Online boutique interface displaying luxury jewelry",
     },
   },
