@@ -116,7 +116,7 @@ const DEFAULT_ITEMS: TimelineItem[] = [
   },
 ];
 
-export default function about({ items }: VerticalTimelineProps) {
+export default function About({ items }: VerticalTimelineProps = {}) {
   const data = items && items.length > 0 ? items : DEFAULT_ITEMS;
 
   return (
