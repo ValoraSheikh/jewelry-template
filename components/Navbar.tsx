@@ -427,19 +427,19 @@ export default function Example() {
             </p>
 
             <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-              <a
-                href="#"
+              <Link
+                href="/sign-up"
                 className="text-sm font-medium text-white hover:text-gray-100"
               >
                 Create an account
-              </a>
+              </Link>
               <span aria-hidden="true" className="h-6 w-px bg-gray-600" />
-              <a
-                href="#"
+              <Link
+                href="/sign-in"
                 className="text-sm font-medium text-white hover:text-gray-100"
               >
                 Sign in
-              </a>
+              </Link>
             </div>
           </div>
         </div>
