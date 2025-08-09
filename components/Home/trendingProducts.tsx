@@ -118,7 +118,7 @@ export default function TrendingProducts() {
         </div>
 
         <div className="mt-12 flex px-4 sm:hidden">
-          <a href="#" className="text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+          <a href="#" className="text-sm font-semibold text-gray-600 hover:text-gray-500">
             See everything
             <span aria-hidden="true"> &rarr;</span>
           </a>

@@ -67,7 +67,7 @@ export default function Category1() {
         </div>
 
         <div className="mt-6 px-4 sm:hidden">
-          <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+          <a href="#" className="block text-sm font-semibold text-gray-600 hover:text-gray-500">
             Browse all categories
             <span aria-hidden="true"> &rarr;</span>
           </a>
