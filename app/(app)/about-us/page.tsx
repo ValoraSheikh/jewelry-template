@@ -59,10 +59,6 @@ type TimelineItem = {
   };
 };
 
-type VerticalTimelineProps = {
-  items?: TimelineItem[];
-};
-
 const DEFAULT_ITEMS: TimelineItem[] = [
   {
     year: "1998",
@@ -116,8 +112,14 @@ const DEFAULT_ITEMS: TimelineItem[] = [
   },
 ];
 
-export default function About({ items }: VerticalTimelineProps = {}) {
-  const data = items && items.length > 0 ? items : DEFAULT_ITEMS;
+type SearchParams = { [key: string]: string | string[] | undefined };
+
+export default function About({
+  searchParams,
+}: {
+  searchParams?: Promise<SearchParams>;
+}) {
+  const data = DEFAULT_ITEMS;
 
   return (
     <>
