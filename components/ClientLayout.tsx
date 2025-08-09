@@ -13,6 +13,7 @@ export default function ClientLayout({
   const isAuthPage =
     pathname === "/sign-in" ||
     pathname === "/sign-up" ||
+    pathname === "/checkout" ||
     pathname.startsWith("/admin");
 
   return (

@@ -231,7 +231,7 @@ export default function Example() {
   const [openPopover, setOpenPopover] = useState<string | null>(null);
   const panelRefs = useRef<Record<string, HTMLElement | null>>({});
   const buttonRefs = useRef<Record<string, HTMLElement | null>>({});
-  const currencies = ["CAD", "USD", "AUD", "EUR", "GBP"];
+  const currencies = ["IND"];
 
   // Close popover when clicking outside its button + panel
   useEffect(() => {

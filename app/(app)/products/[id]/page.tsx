@@ -1,90 +1,134 @@
-import { StarIcon } from '@heroicons/react/20/solid'
-import { CurrencyDollarIcon, GlobeAmericasIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+"use client";
+
+import { StarIcon } from "@heroicons/react/20/solid";
+import {
+  CurrencyDollarIcon,
+  GlobeAmericasIcon,
+} from "@heroicons/react/24/outline";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const product = {
-  name: 'Basic Tee',
-  price: '$35',
+  name: "Basic Tee",
+  price: "₹3500",
   rating: 3.9,
   reviewCount: 512,
-  href: '#',
+  href: "#",
   breadcrumbs: [
-    { id: 1, name: 'Women', href: '#' },
-    { id: 2, name: 'Clothing', href: '#' },
+    { id: 1, name: "Women", href: "#" },
+    { id: 2, name: "Clothing", href: "#" },
   ],
   images: [
     {
       id: 1,
-      imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-featured-product-shot.jpg',
+      imageSrc:
+        "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D",
       imageAlt: "Back of women's Basic Tee in black.",
       primary: true,
     },
     {
       id: 2,
-      imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-product-shot-01.jpg',
+      imageSrc:
+        "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D",
       imageAlt: "Side profile of women's Basic Tee in black.",
       primary: false,
     },
     {
       id: 3,
-      imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-product-shot-02.jpg',
+      imageSrc:
+        "https://plus.unsplash.com/premium_photo-1681276170092-446cd1b5b32d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D",
       imageAlt: "Front of women's Basic Tee in black.",
       primary: false,
     },
   ],
   colors: [
-    { id: 'black', name: 'Black', classes: 'bg-gray-900 checked:outline-gray-900' },
-    { id: 'heather-grey', name: 'Heather Grey', classes: 'bg-gray-400 checked:outline-gray-400' },
+    {
+      id: "black",
+      name: "Black",
+      classes: "bg-gray-900 checked:outline-gray-900",
+    },
+    {
+      id: "heather-grey",
+      name: "Heather Grey",
+      classes: "bg-gray-400 checked:outline-gray-400",
+    },
   ],
   sizes: [
-    { id: 'xxs', name: 'XXS', inStock: true },
-    { id: 'xs', name: 'XS', inStock: true },
-    { id: 's', name: 'S', inStock: true },
-    { id: 'm', name: 'M', inStock: true },
-    { id: 'l', name: 'L', inStock: true },
-    { id: 'xl', name: 'XL', inStock: false },
+    { id: "xxs", name: "XXS", inStock: true },
+    { id: "xs", name: "XS", inStock: true },
+    { id: "s", name: "S", inStock: true },
+    { id: "m", name: "M", inStock: true },
+    { id: "l", name: "L", inStock: true },
+    { id: "xl", name: "XL", inStock: false },
   ],
   description: `
     <p>The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewn locally, with a special dye technique that gives each tee it's own look.</p>
     <p>Looking to stock your closet? The Basic tee also comes in a 3-pack or 5-pack at a bundle discount.</p>
   `,
   details: [
-    'Only the best materials',
-    'Ethically and locally made',
-    'Pre-washed and pre-shrunk',
-    'Machine wash cold with similar colors',
+    "Only the best materials",
+    "Ethically and locally made",
+    "Pre-washed and pre-shrunk",
+    "Machine wash cold with similar colors",
   ],
-}
+};
 
 const policies = [
-  { name: 'International delivery', icon: GlobeAmericasIcon, description: 'Get your order in 2 years' },
-  { name: 'Loyalty rewards', icon: CurrencyDollarIcon, description: "Don't look at other tees" },
-]
+  {
+    name: "International delivery",
+    icon: GlobeAmericasIcon,
+    description: "Get your order in 2 years",
+  },
+  {
+    name: "Loyalty rewards",
+    icon: CurrencyDollarIcon,
+    description: "Don't look at other tees",
+  },
+];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
+  const router = useRouter();
+
   return (
     <div className="bg-white">
       <div className="pt-6 pb-16 sm:pb-24">
-        <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav
+          aria-label="Breadcrumb"
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+        >
           <ol role="list" className="flex items-center space-x-4">
             {product.breadcrumbs.map((breadcrumb) => (
               <li key={breadcrumb.id}>
                 <div className="flex items-center">
-                  <a href={breadcrumb.href} className="mr-4 text-sm font-medium text-gray-900">
+                  <a
+                    href={breadcrumb.href}
+                    className="mr-4 text-sm font-medium text-gray-900"
+                  >
                     {breadcrumb.name}
                   </a>
-                  <svg viewBox="0 0 6 20" aria-hidden="true" className="h-5 w-auto text-gray-300">
-                    <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+                  <svg
+                    viewBox="0 0 6 20"
+                    aria-hidden="true"
+                    className="h-5 w-auto text-gray-300"
+                  >
+                    <path
+                      d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
               </li>
             ))}
             <li className="text-sm">
-              <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
+              <a
+                href={product.href}
+                aria-current="page"
+                className="font-medium text-gray-500 hover:text-gray-600"
+              >
                 {product.name}
               </a>
             </li>
@@ -94,8 +138,12 @@ export default function Example() {
           <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
             <div className="lg:col-span-5 lg:col-start-8">
               <div className="flex justify-between">
-                <h1 className="text-xl font-medium text-gray-900">{product.name}</h1>
-                <p className="text-xl font-medium text-gray-900">{product.price}</p>
+                <h1 className="text-xl font-medium text-gray-900">
+                  {product.name}
+                </h1>
+                <p className="text-xl font-medium text-gray-900">
+                  {product.price}
+                </p>
               </div>
               {/* Reviews */}
               <div className="mt-4">
@@ -111,17 +159,25 @@ export default function Example() {
                         key={rating}
                         aria-hidden="true"
                         className={classNames(
-                          product.rating > rating ? 'text-yellow-400' : 'text-gray-200',
-                          'size-5 shrink-0',
+                          product.rating > rating
+                            ? "text-yellow-400"
+                            : "text-gray-200",
+                          "size-5 shrink-0"
                         )}
                       />
                     ))}
                   </div>
-                  <div aria-hidden="true" className="ml-4 text-sm text-gray-300">
+                  <div
+                    aria-hidden="true"
+                    className="ml-4 text-sm text-gray-300"
+                  >
                     ·
                   </div>
                   <div className="ml-4 flex">
-                    <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                    <a
+                      href="#"
+                      className="text-sm font-medium text-gray-600 hover:text-gray-500"
+                    >
                       See all {product.reviewCount} reviews
                     </a>
                   </div>
@@ -136,14 +192,16 @@ export default function Example() {
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
                 {product.images.map((image) => (
                   <Image
-                  height={500}
-                  width={500}
+                    height={500}
+                    width={500}
                     key={image.id}
                     alt={image.imageAlt}
                     src={image.imageSrc}
                     className={classNames(
-                      image.primary ? 'lg:col-span-2 lg:row-span-2' : 'hidden lg:block',
-                      'rounded-lg',
+                      image.primary
+                        ? "lg:col-span-2 lg:row-span-2"
+                        : "hidden lg:block",
+                      "rounded-lg"
                     )}
                   />
                 ))}
@@ -159,7 +217,10 @@ export default function Example() {
                   <fieldset aria-label="Choose a color" className="mt-2">
                     <div className="flex items-center gap-x-3">
                       {product.colors.map((color) => (
-                        <div key={color.id} className="flex rounded-full outline -outline-offset-1 outline-black/10">
+                        <div
+                          key={color.id}
+                          className="flex rounded-full outline -outline-offset-1 outline-black/10"
+                        >
                           <input
                             defaultValue={color.id}
                             defaultChecked={color === product.colors[0]}
@@ -168,7 +229,7 @@ export default function Example() {
                             aria-label={color.name}
                             className={classNames(
                               color.classes,
-                              'size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3',
+                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                             )}
                           />
                         </div>
@@ -181,7 +242,10 @@ export default function Example() {
                 <div className="mt-8">
                   <div className="flex items-center justify-between">
                     <h2 className="text-sm font-medium text-gray-900">Size</h2>
-                    <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                    <a
+                      href="#"
+                      className="text-sm font-medium text-gray-600 hover:text-gray-500"
+                    >
                       See sizing chart
                     </a>
                   </div>
@@ -192,7 +256,7 @@ export default function Example() {
                         <label
                           key={size.id}
                           aria-label={size.name}
-                          className="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25"
+                          className="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-gray-600 has-checked:bg-gray-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-gray-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25"
                         >
                           <input
                             defaultValue={size.id}
@@ -212,8 +276,12 @@ export default function Example() {
                 </div>
 
                 <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push("/cart-page");
+                  }}
                   type="submit"
-                  className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+                  className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-600 px-8 py-3 text-base font-medium text-white hover:bg-gray-700 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-hidden"
                 >
                   Add to cart
                 </button>
@@ -221,7 +289,9 @@ export default function Example() {
 
               {/* Product details */}
               <div className="mt-10">
-                <h2 className="text-sm font-medium text-gray-900">Description</h2>
+                <h2 className="text-sm font-medium text-gray-900">
+                  Description
+                </h2>
 
                 <div
                   dangerouslySetInnerHTML={{ __html: product.description }}
@@ -230,10 +300,15 @@ export default function Example() {
               </div>
 
               <div className="mt-8 border-t border-gray-200 pt-8">
-                <h2 className="text-sm font-medium text-gray-900">Fabric &amp; Care</h2>
+                <h2 className="text-sm font-medium text-gray-900">
+                  Fabric &amp; Care
+                </h2>
 
                 <div className="mt-4">
-                  <ul role="list" className="list-disc space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-300">
+                  <ul
+                    role="list"
+                    className="list-disc space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-300"
+                  >
                     {product.details.map((item) => (
                       <li key={item} className="pl-2">
                         {item}
@@ -251,12 +326,22 @@ export default function Example() {
 
                 <dl className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                   {policies.map((policy) => (
-                    <div key={policy.name} className="rounded-lg border border-gray-200 bg-gray-50 p-6 text-center">
+                    <div
+                      key={policy.name}
+                      className="rounded-lg border border-gray-200 bg-gray-50 p-6 text-center"
+                    >
                       <dt>
-                        <policy.icon aria-hidden="true" className="mx-auto size-6 shrink-0 text-gray-400" />
-                        <span className="mt-4 text-sm font-medium text-gray-900">{policy.name}</span>
+                        <policy.icon
+                          aria-hidden="true"
+                          className="mx-auto size-6 shrink-0 text-gray-400"
+                        />
+                        <span className="mt-4 text-sm font-medium text-gray-900">
+                          {policy.name}
+                        </span>
                       </dt>
-                      <dd className="mt-1 text-sm text-gray-500">{policy.description}</dd>
+                      <dd className="mt-1 text-sm text-gray-500">
+                        {policy.description}
+                      </dd>
                     </div>
                   ))}
                 </dl>
@@ -266,5 +351,5 @@ export default function Example() {
         </div>
       </div>
     </div>
-  )
+  );
 }

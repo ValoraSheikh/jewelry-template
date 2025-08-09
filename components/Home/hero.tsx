@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -46,12 +47,12 @@ export default function Hero() {
           <p className="mt-4 text-xl text-white font-serif">
             Discover our signature collection — where artistry meets timeless beauty.
           </p>
-          <a
-            href="#"
+          <Link
+            href="/products"
             className="mt-8 inline-block rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100"
           >
             Shop New Arrivals
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SplitImage() {
   return (
@@ -28,12 +29,12 @@ export default function SplitImage() {
             <p className="mt-1 text-2xl font-medium text-white font-serif">
               Discover brilliance perfected over generations.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/products"
               className="mt-4 rounded-md bg-white px-4 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50"
             >
               Explore Collection
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative flex">
@@ -51,12 +52,12 @@ export default function SplitImage() {
             <p className="mt-1 text-2xl font-medium text-white font-serif">
               Crafted in pure 22K gold, inspired by royal traditions.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/products"
               className="mt-4 rounded-md bg-white px-4 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50"
             >
               Shop now
-            </a>
+            </Link>
           </div>
         </div>
       </div>
