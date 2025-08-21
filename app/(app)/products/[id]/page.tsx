@@ -6,74 +6,59 @@ import {
   GlobeAmericasIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-const product = {
-  name: "Basic Tee",
-  price: "₹3500",
-  rating: 3.9,
-  reviewCount: 512,
-  href: "#",
-  breadcrumbs: [
-    { id: 1, name: "Women", href: "#" },
-    { id: 2, name: "Clothing", href: "#" },
-  ],
-  images: [
-    {
-      id: 1,
-      imageSrc:
-        "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D",
-      imageAlt: "Back of women's Basic Tee in black.",
-      primary: true,
-    },
-    {
-      id: 2,
-      imageSrc:
-        "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D",
-      imageAlt: "Side profile of women's Basic Tee in black.",
-      primary: false,
-    },
-    {
-      id: 3,
-      imageSrc:
-        "https://plus.unsplash.com/premium_photo-1681276170092-446cd1b5b32d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D",
-      imageAlt: "Front of women's Basic Tee in black.",
-      primary: false,
-    },
-  ],
-  colors: [
-    {
-      id: "black",
-      name: "Black",
-      classes: "bg-gray-900 checked:outline-gray-900",
-    },
-    {
-      id: "heather-grey",
-      name: "Heather Grey",
-      classes: "bg-gray-400 checked:outline-gray-400",
-    },
-  ],
-  sizes: [
-    { id: "xxs", name: "XXS", inStock: true },
-    { id: "xs", name: "XS", inStock: true },
-    { id: "s", name: "S", inStock: true },
-    { id: "m", name: "M", inStock: true },
-    { id: "l", name: "L", inStock: true },
-    { id: "xl", name: "XL", inStock: false },
-  ],
-  description: `
-    <p>The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewn locally, with a special dye technique that gives each tee it's own look.</p>
-    <p>Looking to stock your closet? The Basic tee also comes in a 3-pack or 5-pack at a bundle discount.</p>
-  `,
-  details: [
-    "Only the best materials",
-    "Ethically and locally made",
-    "Pre-washed and pre-shrunk",
-    "Machine wash cold with similar colors",
-  ],
-};
+// Define interfaces to match products.json
+interface Image {
+  id: number;
+  imageSrc: string;
+  imageAlt: string;
+  primary: boolean;
+}
 
-const policies = [
+interface Breadcrumb {
+  id: number;
+  name: string;
+  href: string;
+}
+
+interface Color {
+  id: string;
+  name: string;
+  classes: string;
+}
+
+interface Size {
+  id: string;
+  name: string;
+  inStock: boolean;
+}
+
+interface Product {
+  id: number;
+  name: string;
+  href: string;
+  price: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  rating: number;
+  reviewCount: number;
+  breadcrumbs: Breadcrumb[];
+  images: Image[];
+  colors: Color[];
+  sizes: Size[];
+  details: string[];
+}
+
+interface Policy {
+  name: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  description: string;
+}
+
+const policies: Policy[] = [
   {
     name: "International delivery",
     icon: GlobeAmericasIcon,
@@ -90,8 +75,53 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function ProductDetail() {
   const router = useRouter();
+  const params = useParams();
+  const id = params.id; // Get ID from URL (e.g., /products/1)
+  const [product, setProduct] = useState<Product | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchProduct() {
+      try {
+        const response = await fetch("/products.json");
+        if (!response.ok) {
+          throw new Error(`Failed to fetch products: ${response.status} ${response.statusText}`);
+        }
+        const products: Product[] = await response.json();
+        const foundProduct = products.find((p) => p.id === Number(id));
+        if (!foundProduct) {
+          throw new Error(`Product with ID ${id} not found`);
+        }
+        setProduct(foundProduct);
+      } catch (error) {
+        console.error("Error fetching product:", error);
+        setError("Unable to load product details. Please try again later.");
+      }
+    }
+    fetchProduct();
+  }, [id]);
+
+  if (error) {
+    return (
+      <div className="bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <p className="text-red-500">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!product) {
+    return (
+      <div className="bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <p>Loading product...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white">
@@ -260,7 +290,7 @@ export default function Example() {
                         >
                           <input
                             defaultValue={size.id}
-                            defaultChecked={size === product.sizes[2]}
+                            defaultChecked={size === product.sizes[2] || size === product.sizes[0]}
                             name="size"
                             type="radio"
                             disabled={!size.inStock}
@@ -294,14 +324,15 @@ export default function Example() {
                 </h2>
 
                 <div
-                  dangerouslySetInnerHTML={{ __html: product.description }}
                   className="mt-4 space-y-4 text-sm/6 text-gray-500"
-                />
+                >
+                  <p>{product.description}</p>
+                </div>
               </div>
 
               <div className="mt-8 border-t border-gray-200 pt-8">
                 <h2 className="text-sm font-medium text-gray-900">
-                  Fabric &amp; Care
+                  Features
                 </h2>
 
                 <div className="mt-4">
