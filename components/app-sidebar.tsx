@@ -3,20 +3,18 @@
 import * as React from "react"
 import {
   IconCamera,
-  IconChartBar,
+  IconCarambola,
   IconDashboard,
   IconDatabase,
   IconFileAi,
   IconFileDescription,
   IconFileWord,
-  IconFolder,
   IconHelp,
   IconInnerShadowTop,
-  IconListDetails,
   IconReport,
   IconSearch,
   IconSettings,
-  IconUsers,
+  IconTruckDelivery,
 } from "@tabler/icons-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -32,6 +30,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { BoxIcon, Users } from "lucide-react"
 
 const data = {
   user: {
@@ -42,28 +41,28 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
-      icon: IconDashboard,
+      url: "/admin/dashboard",
+      icon: () => <IconDashboard />,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: IconListDetails,
+      title: "Orders",
+      url: "/admin/dashboard/orders",
+      icon: () => <IconTruckDelivery />,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
+      title: "Products",
+      url: "/admin/dashboard/products",
+      icon: () => <BoxIcon />,
     },
     {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
+      title: "Users",
+      url: "/admin/dashboard/users",
+      icon: () => <Users />,
     },
     {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
+      title: "Reviews",
+      url: "/admin/dashboard/reviews",
+      icon: () => <IconCarambola />,
     },
   ],
   navClouds: [
